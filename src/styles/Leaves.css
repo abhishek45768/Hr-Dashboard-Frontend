@@ -1,0 +1,580 @@
+/* Leaves Page Styles */
+.leaves-page {
+  padding: 20px;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.leaves-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.leaves-header h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.leaves-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 10px 15px 10px 35px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  width: 200px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.add-leave-btn {
+  background-color: #5a0099;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-leave-btn:hover {
+  background-color: #4a007a;
+}
+
+.leaves-content {
+  display: flex;
+  gap: 20px;
+  min-height: max-content;
+}
+
+.leaves-table-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.leaves-calendar-container {
+  width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Applied Leaves Table Styles */
+.applied-leaves-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.applied-leaves-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px;
+  background-color: #5a0099;
+  color: white;
+  margin: 0;
+}
+
+.leaves-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaves-table th {
+  background-color: #f9f9f9;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.leaves-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.profile-cell {
+  width: 50px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-name {
+  font-weight: 500;
+  margin: 0 0 2px 0;
+}
+
+.employee-designation {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.status-badge.approved {
+  background-color: rgba(0, 175, 0, 0.1);
+  color: #008800;
+  border: 1px solid rgba(0, 175, 0, 0.2);
+}
+
+.status-badge.pending {
+  background-color: rgba(255, 175, 0, 0.1);
+  color: #cc8800;
+  border: 1px solid rgba(255, 175, 0, 0.2);
+}
+
+.status-badge.rejected {
+  background-color: rgba(255, 50, 50, 0.1);
+  color: #cc0000;
+  border: 1px solid rgba(255, 50, 50, 0.2);
+}
+
+.docs-btn {
+  background: none;
+  border: none;
+  color: #5a0099;
+  cursor: pointer;
+}
+
+.no-leaves {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Calendar Styles */
+.leave-calendar-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.leave-calendar-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px;
+  background-color: #5a0099;
+  color: white;
+  margin: 0;
+}
+
+.calendar-container {
+  padding: 15px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.month-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.calendar-day {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.calendar-day.empty {
+  background: none;
+}
+
+.calendar-day.has-leaves {
+  background-color: rgba(90, 0, 153, 0.1);
+  color: #5a0099;
+  font-weight: 500;
+}
+
+.leave-indicator {
+  width: 6px;
+  height: 6px;
+  background-color: #5a0099;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+}
+
+.approved-leaves {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+  border-top: 1px solid #eaeaea;
+}
+
+.approved-leaves h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.approved-leave-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.approved-leave-profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.approved-leave-info {
+  flex: 1;
+}
+
+.approved-leave-name {
+  font-weight: 500;
+  margin: 0 0 2px 0;
+}
+
+.approved-leave-designation {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.approved-leave-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.no-approved-leaves {
+  text-align: center;
+  color: #666;
+  padding: 20px 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.add-leave-modal {
+  background-color: white;
+  width: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #5a0099;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.leave-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+ width: 90%;
+    padding: 10px 15px;
+    border: 1px solid blue;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: #cc0000;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.error-message {
+  color: #cc0000;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.employee-select {
+  position: relative;
+}
+
+.employee-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.employee-option {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.employee-option:hover {
+  background-color: #f5f5f5;
+}
+
+.no-results {
+  padding: 10px 15px;
+  color: #666;
+  text-align: center;
+}
+
+.clear-input {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.date-input {
+  position: relative;
+}
+
+.calendar-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.calendar-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.selected {
+  background-color: #5a0099;
+  color: white;
+}
+
+.document-upload {
+  display: flex;
+  align-items: center;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.upload-icon {
+  margin-left: auto;
+}
+
+.document-preview {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.document-preview button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background-color: #5a0099;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.save-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Status Filter Styles */
+.status-filter {
+  position: relative;
+}
+
+.status-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.status-option {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.status-option:hover {
+  background-color: #f5f5f5;
+}
+
+.status-option.selected {
+  background-color: rgba(90, 0, 153, 0.1);
+  color: #5a0099;
+}
