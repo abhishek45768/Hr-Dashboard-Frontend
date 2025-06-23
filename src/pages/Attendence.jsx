@@ -5,51 +5,7 @@ import '../styles/Attendence.css';
 const Attendance = () => {
   const [statusFilter, setStatusFilter] = useState('');
   const [employees, setEmployees] = useState([
-    {
-      id: 1,
-      name: 'Jane Copper',
-      avatar: '/assets/images/avatar-1.jpg',
-      position: 'Full Time',
-      department: 'Designer',
-      task: 'Dashboard Home page Alignment',
-      status: 'Present'
-    },
-    {
-      id: 2,
-      name: 'Arlene McCoy',
-      avatar: '/assets/images/avatar-2.jpg',
-      position: 'Full Time',
-      department: 'Designer',
-      task: 'Dashboard Login page design, Dashboard Home page design',
-      status: 'Present'
-    },
-    {
-      id: 3,
-      name: 'Cody Fisher',
-      avatar: '/assets/images/avatar-3.jpg',
-      position: 'Senior',
-      department: 'Backend Development',
-      task: '--',
-      status: 'Absent'
-    },
-    {
-      id: 4,
-      name: 'Janney Wilson',
-      avatar: '/assets/images/avatar-4.jpg',
-      position: 'Junior',
-      department: 'Backend Development',
-      task: 'Dashboard login page integration',
-      status: 'Present'
-    },
-    {
-      id: 5,
-      name: 'Leslie Alexander',
-      avatar: '/assets/images/avatar-5.jpg',
-      position: 'Team Lead',
-      department: 'Human Resource',
-      task: '4 scheduled interview, Sorting of resumes',
-      status: 'Present'
-    }
+   
   ]);
 
   const [actionMenuOpen, setActionMenuOpen] = useState(null);
