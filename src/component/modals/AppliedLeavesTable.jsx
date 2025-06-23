@@ -9,7 +9,7 @@ const AppliedLeavesTable = ({ leaves }) => {
       <table className="leaves-table">
         <thead>
           <tr>
-            <th>Profile</th>
+        
             <th>Name</th>
             <th>Date</th>
             <th>Reason</th>
@@ -20,20 +20,20 @@ const AppliedLeavesTable = ({ leaves }) => {
         <tbody>
           {leaves.map((leave) => (
             <tr key={leave._id}>
-              <td className="profile-cell">
-                <img src={`${baseUrl}public/profiles/${leave.employee.profileImage}` || "/placeholder.svg"} alt={leave.name} className="profile-pic" />
-              </td>
+              {/* <td className="profile-cell">
+                <img src={`${baseUrl}public/profiles/${leave.employee?.profileImage}` || "/placeholder.svg"} alt={leave.name} className="profile-pic" />
+              </td> */}
               <td>
                 <div className="employee-info">
-                  <p className="employee-name">{leave.employee.fullName}</p>
-                  <p className="employee-designation">{leave.employee.position}</p>
+                  <p className="employee-name">{leave?.employee?.fullName ||"Abhishek"}</p>
+                  {/* <p className="employee-designation">{leave?.employee?.position}</p> */}
                 </div>
               </td>
-              <td>{leave.date}</td>
-              <td>{leave.reason}</td>
+              <td>{new Date(leave?.date).toLocaleString()}</td>
+              <td>{leave?.reason}</td>
               <td>
-                <div className={`status-badge ${leave.status.toLowerCase()}`}>
-                  <select name="status" value={leave.status}>
+                <div className={`status-badge ${leave?.status?.toLowerCase()}`}>
+                  <select name="status" value={leave?.status}>
                     <option value="Pending">Pending</option>
                     <option value="Approved">Approved</option>
                     <option value="Rejected">Rejected</option>

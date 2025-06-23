@@ -63,18 +63,18 @@ const Leaves = () => {
         <div className="leaves-header">
           <h1>Leaves</h1>
           <div className="leaves-actions">
-            <StatusFilter
+            {/* <StatusFilter
               selectedStatus={selectedStatus}
               onStatusChange={handleStatusChange}
-            />
-            <div className="search-container">
+            /> */}
+            {/* <div className="search-container">
               <input
                 type="text"
                 placeholder="Search"
                 className="search-input"
               />
               <i className="search-icon"></i>
-            </div>
+            </div> */}
             <button
               className="add-leave-btn"
               onClick={() => setIsAddLeaveModalOpen(true)}
